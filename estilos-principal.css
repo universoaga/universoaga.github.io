@@ -1,0 +1,766 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.4em;
+    color: rgb(0, 0, 0);
+    background: #00212b;
+    font-family: sans-serif;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.section{
+    clear: both;
+    padding: 0;
+    margin: 0;
+}
+
+.col{
+    display: block;
+    float: left;
+    margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child{
+    margin-left: 0;
+}
+
+.span_3_of_3{
+    width: 100%;
+}
+
+.span_2_of_3{
+    width: 66.1%;
+}
+
+.span_1_of_3{
+    width: 32.2%;
+}
+
+/*Encabezado y Navegacion*/
+header{
+    width: 100%;
+    height: 120px;
+    background: #a7a8d0;
+    
+   
+}
+
+.menu{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    perspective: 200px;
+    color: white;
+    
+}
+
+.menu ul{
+    display: flex;
+    margin: auto;
+    
+}
+
+.menu li{
+    list-style: none;
+    padding: 15px 20px;
+    
+}
+
+.menu li:hover{
+    background: rgba(255, 255, 255, 0.3);
+    color: #5f6cdc;
+    cursor: pointer;
+    transition: all 300ms; 
+       
+}
+
+.menu ul li ul{
+    *display: none;
+    flex-direction: column;
+    position: absolute;
+    background: #1c2c69;
+    margin-top: 15px;
+    transform: rotateY(240deg) scale(0);
+    transition: all 1s;
+    box-shadow: 1px 1px 10px 0px rgb(255, 252, 252);
+    z-index: 1000;
+}
+
+.menu ul li:hover > ul{
+    transform: rotateY(0deg) scale(1);
+    transition: all 1s;
+    
+}
+
+.menu ul li ul:before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 8px solid #f0e818;
+    position: absolute;
+    margin-top: -8px;
+    margin-left: 20px;
+    
+}
+
+.menu ul li ul li ul li{
+    position: relative;
+    
+}
+.menu ul li ul li:hover > ul{
+    transform: rotateY(0deg) scale(1);
+z-index: 1000;
+}
+
+@media screen and (max-width:1000px){
+    
+    
+    .content-menu{
+        position: fixed;
+        width: 100%;
+        height: auto;
+        display: none;
+        padding: 20px;
+        
+        
+    }
+    
+    .content-item{
+        margin-top: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        justify-content: center;
+        
+    }
+    
+    .content-item span{
+        padding: 20px;
+        z-index: 1000;
+    }
+    
+    
+    .content-menu h4{
+        transform: translateX(0px);
+        
+    }
+    
+    
+    .content-article{
+        padding: 0px;
+        margin-top: 60px;
+        margin-left: 0;
+        
+    }
+
+    .content-article article{
+        padding: 10px;
+        z-index: 1000;
+    }
+}
+
+nav{
+    width: 100%;
+    margin-bottom: 1em;
+    background: #1c2c69;
+    
+}
+
+.logo{
+    width: 100px;
+    display: block;
+    margin: auto;
+    
+}
+
+/*Para submenú despegable*/
+
+ul{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-weight: 300;
+    text-align: center;
+    transition: max-height 0.5s;
+}
+
+.nav-item{
+    display: inline-block;
+    padding: 20px;
+    font-size: 1.4em;
+}
+
+.nav-item:hover{
+    background: #F05F88;
+    cursor: pointer;
+}
+
+.menu-bar{
+    width: 6%;
+    background: #1c2c69;
+    padding: 15px 20px;
+    color: white;
+    font-size: 1.4em;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-icon{
+    float: right;
+    clear:both;
+    margin-top: -5px;
+    font-size: 1.4em;
+}
+
+/*Publicaciones*/
+
+.container{
+    max-width: 1020px;
+    margin: 0 auto;
+    margin-top: -20px;
+    padding: 20px;
+}
+
+.blog-post{
+    background: #a7a8d0;
+    margin: 0 auto 2em auto;
+    padding: 35px 30px;
+}
+
+.side-post{
+    background: #b6b7cc;
+    margin: 0 auto 1.5em auto;
+    width: 15em;
+    padding: 20px;
+}
+
+.blog-content{
+    font-size: 1.2em;
+    border-left: 5px solid #5c345b;
+    padding-left: 15px;
+}
+
+.side-content{
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.blog-title{
+    font-weight: 500px;
+    font-size: 2.5em;
+    margin-top: 5px;
+    color: #eeeeee;
+    margin-bottom: 20px;
+    
+    
+}
+
+.linea-bonita{
+margin-top: 5px;
+    border-bottom:  5px solid #5c345b;
+margin-bottom: 30px;
+}
+
+
+.blog-title-fondo{
+    font-weight: 500px;
+    font-size: 3em;
+    margin-top: -10px;
+    color: #eeeeee;
+    
+}
+
+.blog-subtitle{
+    font-weight: 500px;
+    font-size: 2em;
+    margin-top: 5px;
+    color: #eeeeee;
+    line-height: 35px;
+    
+}
+
+.blog-subtitle-fondo{
+    font-weight: 500px;
+    font-size: 2em;
+    margin-top: 5px;
+    color: #eeeeee;
+    
+}
+
+.date{
+    font-size: 1em;
+    font-weight: 400;
+    color: #6e6d6d;
+    margin-top: -10px;
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+}
+
+.post-link{
+    color: #5d05a5f6;
+    font-style: italic;
+    transition: all 0.4s;
+}
+
+.post-link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*Boton*/
+
+.button{
+    display: block;
+    padding: 15px 20px;
+    margin-top: .8em;
+    background: #5c345b;
+    text-align: center;
+    color: white;
+    font-size: 1.4em;
+    border-radius: 3px;
+    transition: all .4s ease-in;
+}
+
+.button:hover{
+    background: #B637AD;
+}
+
+/*footer*/
+
+footer{
+    width: 100%;
+    float: right;
+    background-image: url(../imagenes/science-fiction-1674554.jpg);
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+footer h1{
+    margin: 20px auto;
+}
+
+footer p{
+    margin: auto;
+}
+
+@media screen and (max-width: 56.25em){
+    .col{
+        margin: 1% 0 1% 0%;
+    }
+    
+    .span_3_of_3,
+    .span_2_of_3,
+    .span_1_of_3{
+        width: 100%;
+    }
+    
+    .side-post{
+        width: 42%;
+        float: left;
+        margin: -2% 0 1% 1.6%;
+    }
+}
+
+@media screen and (max-width: 42.813em){
+    .side-post{
+        width: auto;
+        padding: 15px;
+        margin: -2% auto 8% auto;
+    }
+    
+    .blog-title{
+        font-size: 1.95em;
+    }
+    
+    .date {
+        font-size: .9em;
+    }
+}
+
+/* @480px */
+
+@media screen and (max-width: 30em){
+    nav ul{
+        max-height: 0;
+    }
+    
+    .reveal{
+        max-height: 19em;
+    }
+    
+    nav ul .nav-item{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .menu-bar{
+        display: block;
+    }
+}
+
+/* @380px */
+
+@media screen and (max-width: 23.75em){
+    .blog-content,
+    .post-link{
+        font-size: .9em;
+    }
+    
+    .side-content{
+        font-size: .8em;
+    }
+    
+    .button{
+        padding: 10px 15px;
+    }
+    
+    .nav-item{
+        font-size: 1.2em;
+    }
+}
+
+/* imagen fondo */
+.fondo {
+    height: 200px;
+    position: relative;
+    background-image: url(../imagenes/science-fiction-1674554.jpg);
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 130px;
+    margin-top: 0px;
+    z-index: -1000
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 2000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 50px ;
+    
+}
+
+.fondo-lado{
+    height: 650px;
+    position: relative;
+    background-image: url(../imagenes/science-fiction-1674554.jpg);
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 130px;
+    
+}
+
+.blog-title-down{
+    font-weight: 500px;
+    font-size: 2.7em;
+    margin-top: -30px;
+    color: #eeeeee;
+    margin-bottom: 20px;
+    
+    
+}
+
+.blog-subti-down{
+    font-weight: 500px;
+    font-size: 1em;
+    margin-top: -30px;
+    color: #eeeeee;
+    margin-bottom: 20px;
+       
+}
+
+.logo{
+    height: 80px; /* Altura del logo en el header */ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 b{
+    color: #ffffff; /* Color del texto Informática*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

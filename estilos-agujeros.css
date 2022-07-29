@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'open sans';
+    font-size: 16px;
+    background-color: #3e4463;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 2000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 50px ;
+}
+
+/* Main */
+
+.sobre-usted {
+    text-align: left;
+    font-size: 60px;
+    margin-top: 50px;
+    font-weight: 600;
+    color: aliceblue;
+}
+
+.sobre-usted2 {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: 600;
+    color: aliceblue;
+    border-left: 5px solid #5c345b;
+    margin-left: 130px;
+    margin-right: 130px;
+    
+}
+
+.slogan {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 24px;
+    color: rgb(97, 97, 97);
+}
+
+.parrafo1 {
+    margin-top: 30px;
+    margin-bottom: 35px;
+    margin-left: 130px;
+    margin-right: 130px;
+    font-weight: 350;
+    text-align: justify;
+    line-height: 24px;
+    color: bisque;
+    font-size: 25px;
+    border-left: 5px solid #5c345b;
+}
+
+.parrafo {
+    margin-bottom: 35px;
+    margin-left: 130px;
+    margin-right: 130px;
+    font-weight: 350;
+    text-align: justify;
+    line-height: 24px;
+    color: bisque;
+    font-size: 25px;
+    border-left: 5px solid #5c345b;
+}
+
+.acerca-de .boton {
+    display: inline-block;
+    padding: 6px;
+    width: 135px;
+    font-weight: 300;
+    border: 1px solid rgba(24, 16, 16, .7);
+    color: rgb(10, 16, 168);
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 16px;
+    margin-top: 24px;
+}
+
+.galeria {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.imagenes {
+    width: 33.3%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+
+
+}
+
+.imagenes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.encima {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 73, 94, 0.815);
+}
+
+.encima h2 {
+    position: relative;
+    top: 45%;
+    text-align: center;
+    color: #fff;
+}
+
+.encima div {
+    position: relative;
+    display: block;
+    top: 46%;
+    width: 40px;
+    height: 5px;
+    background: rgb(218, 124, 124);
+    margin: auto;
+}
+
+.cards {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    margin: 20px 0;
+    width: 30%;
+    height: 290px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 0px 4px 0 rgba(52, 73, 94, 0.849);
+}
+
+.cards img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.fondo {
+    height: 500px;
+    position: relative;
+    background-image: url(../imagenes/agujero-fondo.jpg);
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 130px;
+}
+
+.fondo-lado{
+    height: 650px;
+    position: relative;
+    background-image: url(../imagenes/agujero-fondo.jpg);
+    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 130px;
+    
+}
+
+.objetivo,
+.subtitulo-objetivo {
+    color: #fff;
+    text-align: center;
+    margin-top: -30px;
+}
+
+.objetivo {
+    font-size: 56px;
+    
+}
+
+.subtitulo-objetivo {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 64px;
+    text-align: left;
+    
+}
+.subtitulo-objetivo2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 64px;
+    text-align: left;
+    color: #fff;
+}
+
+.imagen-logo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.imagen-logo {
+    width: 30%;
+}
+
+.imagen-logo img {
+    width: 100%;
+    margin-left: 325px;
+}
+
+/*Encabezado o Descripción que aparece en el footer, autor y derechos*/
+h3{
+    color:rgba(255, 255, 255, 0.878);
+}
+
+/* Responsive */
+
+@media screen and (max-width:900px) {
+    .card {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:610px) {
+    header .textos {
+        margin-top: 130px;
+    }
+
+    header .titulo {
+        font-size: 75px;
+    }
+
+    .none {
+        display: none
+    }
+
+    .imagenes {
+        flex-grow: 1;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .fondo {
+        height: auto;
+    }
+
+    .especial {
+        display: none;
+    }
+
+    .imagen-logo {
+        margin-left:-160px;
+    }
+}
+
+@media screen and (max-width:380px) {
+    header .textos {
+        margin-top: 100px;
+    }
+
+    header .titulo {
+        font-size: 65px;
+    }
+
+    header .subtitulo {
+        font-size: 25px;
+        margin-bottom: 32px;
+    }
+
+    .sobre-nosotros {
+        font-size: 46px;
+    }
+
+    .slogan {
+        font-size: 20px;
+    }
+
+    .objetivo {
+        font-size: 46px;
+    }
+
+    .subtitulo-objetivo {
+        font-size: 20px;
+    }
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #3e4463; /* Color del header */
+    box-shadow: #ffffff; /* Código por definir para que sirve */ 
+    z-index: 2;
+}
+
+.header-content{
+    max-width: 1200px; /* Comentario */
+    margin: auto; /* Comentario */
+    display: flex;
+    justify-content: space-between; /* Comentario */
+}
+
+.logo{
+    height: 80px; /* Altura del logo en el header */ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 b{
+    color: #ffffff; /* Color del texto Informática*/
+}
+
+
+.menu {
+    height: 80px; /* Altura del Menú en el header */
+}
+
+.menu nav{
+    height: 100%; /* Altura del menu de navegación */
+}
+
+.menu nav ul{
+    height: 100%;
+    display:flex; /* posición del menú de navegación*/
+    list-style: none;
+}
+
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px; /* margen entre la lista del menú*/
+    display: flex; /* Indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu-selected:before{ /* Selector del menú, linea de color*/
+    content: '';
+    width: 100%;
+    height: 9px; /* Linea indicando la navegación seleccionada*/
+    background: #df6527; /* color del selector*/
+    position:fixed;
+    top: 0;
+    left: 0;
+}
+
+.menu nav ul li a{ /* posición del menú de navegación*/
+    color: #ffffff; /* */
+    font-size: 25px; /* posición del menú de navegación*/
+    transition: color 300ms; /* posición del menú de navegación*/
+}
+
+.menu nav ul li a:hover{
+    color: #f5d23d; /* color del efecto al pasar el puntero en el menú */
+}
+
+.menu .text-menu-selected{ /* Selector menú Inicio */
+    color: #f5d23d;
+}
+
+.menu nav ul li a i{ /* No borrar! */
+    display: none;
+}
+
+#icon-menu{ /* propiedades del icono del menú */
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    padding: 10px;
+    font-size: 20px;
+    background: #c0c0c7; /* Color del icono del menú*/
+    border-radius: 100%;
+    color: #4e4b4b; /* Color interior icono del menú */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#icon-menu:hover{ /*Efecto señalador con el mouse */
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 56.25em){
+    .col{
+        margin: 1% 0 1% 0%;
+    }
+    
+    .span_3_of_3,
+    .span_2_of_3,
+    .span_1_of_3{
+        width: 100%;
+    }
+    
+    .side-post{
+        width: 42%;
+        float: left;
+        margin: -2% 0 1% 1.6%;
+    }
+}
